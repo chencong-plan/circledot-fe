@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+      This is CSS Animation component
     <div class="container">
       <Main></Main>
       <Right></Right>

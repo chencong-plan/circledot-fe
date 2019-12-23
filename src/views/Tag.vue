@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    This is Tag Component
     <div class="container">
       <Main></Main>
       <Right></Right>
