@@ -90,6 +90,8 @@ blockquote p {
 pre {
   background: #f8f8f8;
   padding: 18px 15px 12px;
+  border: none !important;
+  box-shadow: 0 0 0 0 !important;
 }
 .content ul li {
   list-style-type:disc;

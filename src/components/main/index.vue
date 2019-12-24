@@ -2,19 +2,22 @@
   <div class="main">
     <Title></Title>
     <Content></Content>
+    <support></support>
   </div>
 </template>
 
 <script>
 import Title from './title.vue'
 import Content from './content.vue'
+import Support from './support.vue'
 export default {
   data () {
-    console.log(Content)
+    return {}
   },
   components: {
     Title,
-    Content
+    Content,
+    Support
   }
 }
 </script>
@@ -23,6 +26,8 @@ export default {
 .main {
   background: #fff;
   width: 940px;
-  padding: 20px;
+  padding: 20px 26px 50px;
+  margin-bottom: 30px;
+  position: relative;
 }
 </style>
