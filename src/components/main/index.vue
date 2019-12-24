@@ -2,19 +2,22 @@
   <div class="main">
     <Title></Title>
     <Content></Content>
+    <support></support>
   </div>
 </template>
 
 <script>
 import Title from './title.vue'
 import Content from './content.vue'
+import Support from './support.vue'
 export default {
   data () {
     return {}
   },
   components: {
     Title,
-    Content
+    Content,
+    Support
   }
 }
 </script>
