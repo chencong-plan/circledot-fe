@@ -49,7 +49,7 @@ export default {}
   margin-right: 28px;
 }
 .title h1 {
-  margin: 25px 0 32px;
+  margin: 25px 0 10px;
 }
 
 </style>

@@ -10,8 +10,12 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "babel-plugin-prismjs": "^1.1.1",
     "core-js": "^3.4.3",
+    "element-ui": "^2.13.0",
+    "mavon-editor": "^2.7.7",
     "prismjs": "^1.17.1",
+    "pygmentize-bundled": "^2.3.0",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
     "vue-property-decorator": "^8.3.0",
@@ -31,7 +35,7 @@
     "@vue/eslint-config-standard": "^4.0.0",
     "@vue/eslint-config-typescript": "^4.0.0",
     "@vue/test-utils": "1.0.0-beta.29",
-    "babel-plugin-prismjs": "^1.1.1",
+    "babel-plugin-component": "^1.1.1",
     "chai": "^4.1.2",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
@@ -39,6 +43,7 @@
     "marked": "^0.8.0",
     "text-loader": "0.0.1",
     "typescript": "~3.5.3",
+    "vue-cli-plugin-element": "^1.0.1",
     "vue-markdown": "^2.2.4",
     "vue-template-compiler": "^2.6.10"
   },
