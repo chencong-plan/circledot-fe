@@ -4,13 +4,13 @@
       <span>目录</span>
       <ul>
         <li v-for="(level1,index) in treeArr" :key=index>
-          <a @click="jumpTitle(level1.title)">{{ level1.title }}</a>
-          <ul>
+          <a :class="{active: activeTitle == level1.title}" @click="jumpTitle(level1.title)">{{ level1.title }}</a>
+          <ul v-if="level1.children.length !== 0">
             <li v-for="(level2,index) in level1.children" :key=index>
-              <a @click="jumpTitle(level2.title)">{{ level2.title }}</a>
-              <ul>
+              <a :class="{active: activeTitle == level2.title}" @click="jumpTitle(level2.title)">{{ level2.title }}</a>
+              <ul v-if="level1.children.length !== 0">
                 <li v-for="(level3,index) in level2.children" :key=index>
-                  <a @click="jumpTitle(level3.title)">{{ level3.title }}</a>
+                  <a :class="{active: activeTitle == level3.title}" @click="jumpTitle(level3.title)">{{ level3.title }}</a>
                 </li>
               </ul>
             </li>
@@ -28,13 +28,27 @@ export default {
     return {
       allTitle: [],
       level: [4, 3, 2],
-      treeArr: []
+      treeArr: [],
+      activeTitle: ''
     }
   },
   created () {
     this.getAllTitle()
     this.getTree()
     this.treeArr = this.allTitle.filter(item => item.flag !== true)
+  },
+  mounted () {
+    this.getTitleTop()
+    let minIndex = 0
+    this.activeTitle = this.allTitle[minIndex].title
+    window.onscroll = () => {
+      for (var i = 0; i < this.allTitle.length; i++) {
+        if (Math.abs(this.allTitle[i].top - window.scrollY) < Math.abs(this.allTitle[minIndex].top - window.scrollY)) {
+          minIndex = i
+          this.activeTitle = this.allTitle[minIndex].title
+        }
+      }
+    }
   },
   methods: {
     getAllTitle () {
@@ -50,6 +64,12 @@ export default {
         })
         index++
       })
+    },
+    getTitleTop () {
+      this.allTitle.forEach(title => {
+        title.top = document.getElementById(title.title).offsetTop
+      })
+      console.log(this.allTitle)
     },
     getTree () {
       // 根据index将目录转换成树结构
@@ -70,7 +90,7 @@ export default {
       })
     },
     jumpTitle (title) {
-      console.log(title)
+      this.activeTitle = title
       window.scroll(0, document.getElementById(title).offsetTop)
     }
   }
@@ -95,7 +115,7 @@ export default {
   list-style-type: disc;
   margin-left: 18px;
   font-weight: normal;
-  line-height: 1.5;
+  line-height: 1.6;
   font-size: 16px;
 }
 .rightContent .content > ul > li {
@@ -103,5 +123,9 @@ export default {
 }
 a {
   cursor: pointer;
+  color: #000;
+}
+a.active {
+  color: #007fff;
 }
 </style>
