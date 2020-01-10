@@ -9,14 +9,12 @@
 import { Component, Vue } from 'vue-property-decorator'
 import Header from './components/header/index.vue'
 import Main from './components/main/index.vue'
-
 @Component({
   components: {
     Header,
     Main
   }
 })
-
 export default class App extends Vue {}
 </script>
 

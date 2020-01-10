@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <Title></Title>
-    <Content></Content>
+    <Content :msg="msg"></Content>
     <support></support>
   </div>
 </template>
@@ -11,6 +11,7 @@ import Title from './title.vue'
 import Content from './content.vue'
 import Support from './support.vue'
 export default {
+  props: ['msg'],
   data () {
     return {}
   },
