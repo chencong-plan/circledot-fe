@@ -12,6 +12,7 @@
           </span>
         </div>
       </div>
+      <div class='follow'>关注</div>
     </div>
     <h1>如何通过K8S编排应用如何通过K8S编排应用如何通</h1>
   </div>
@@ -30,6 +31,8 @@ export default {}
 }
 .title .avatar {
   display: flex;
+  align-items: center;
+  position: relative;
 }
 .title .right {
   font-size: 14px;
@@ -41,6 +44,9 @@ export default {}
 .title .img {
   border-radius: 50%;
 }
+.info {
+  margin-top: 2px;
+}
 .authName {
   font-size: 15px;
   font-weight: bold;
@@ -51,5 +57,14 @@ export default {}
 .title h1 {
   margin: 25px 0 10px;
 }
-
+.follow {
+  position: absolute;
+  border: 1px solid #6cbd45;
+  color: #6cbd45;
+  right: 20px;
+  font-size: 15px;
+  padding: 3px 14px;
+  border-radius: 2px;
+  cursor: pointer;
+}
 </style>
