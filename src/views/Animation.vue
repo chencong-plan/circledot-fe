@@ -2,21 +2,21 @@
   <div class="home">
       This is CSS Animation component
     <div class="container">
-      <Main></Main>
-      <Right></Right>
+      <!-- <Main></Main> -->
+      <!-- <Right></Right> -->
     </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Main from '@/components/main/index.vue'
-import Right from '@/components/right/index.vue'
+// import Main from '@/components/main/index.vue'
+// import Right from '@/components/right/index.vue'
 
 export default {
   components: {
-    Main,
-    Right
+    // Main,
+    // Right
   }
 }
 </script>

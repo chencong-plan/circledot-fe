@@ -26,6 +26,9 @@ export default {
     changeActive (name) {
       this.activeItem = name
     }
+  },
+  created () {
+    this.activeItem = this.$route.path
   }
 }
 </script>
@@ -43,5 +46,8 @@ li {
 }
 li.active {
   color: #067ff9;
+}
+a {
+  color: inherit;
 }
 </style>

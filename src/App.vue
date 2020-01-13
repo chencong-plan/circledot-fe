@@ -8,11 +8,9 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import Header from './components/header/index.vue'
-import Main from './components/main/index.vue'
 @Component({
   components: {
-    Header,
-    Main
+    Header
   }
 })
 export default class App extends Vue {}
@@ -27,8 +25,11 @@ export default class App extends Vue {}
   color: #2c3e50;
   margin-top: 60px;
   background: #f4f5f5;
-  padding-top: 20px;
   height: 100vh;
+}
+body {
+  height: 100vh;
+  background: #f4f5f5;
 }
 * {
   margin: 0;
