@@ -38,6 +38,11 @@ const routes = [
     path: '/animation',
     name: 'animation',
     component: () => import('../views/Animation.vue')
+  },
+  {
+    path: '/write',
+    name: 'write',
+    component: () => import('../views/Write.vue')
   }
 
 ]

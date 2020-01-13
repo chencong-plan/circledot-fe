@@ -29,6 +29,7 @@ export default {
 <style scoped>
 .home {
   background: inherit;
+  border-top: 1px solid transparent;
 }
 .container {
   justify-content:center;
