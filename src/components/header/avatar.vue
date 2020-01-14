@@ -1,12 +1,19 @@
 <template>
   <div class="avatar">
-    <button class="button">写文章</button>
+    <button class="button" @click="jumpWrite">写文章</button>
     <img src="@/assets/avatar1.jpg" alt="" width=45px height=45px>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    jumpWrite () {
+      console.log('xxxxxxxx')
+      this.$router.push({ name: 'write' })
+    }
+  }
+}
 </script>
 
 <style scoped>

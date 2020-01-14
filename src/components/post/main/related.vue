@@ -1,11 +1,17 @@
 <template>
-  <div class="main">
+  <div class="related" ref="related">
+    <div class="title">
+      <span>相关推荐</span>
+    </div>
     <article-list :articleList="articleList"></article-list>
   </div>
 </template>
 
 <script>
-import articleList from '@/components/common/articleList'
+import marked from 'marked'
+import Prism from 'prismjs'
+import articleList from '../../common/articleList'
+// import '@/assets/css/typo.css'
 export default {
   props: ['msg'],
   data () {
@@ -25,15 +31,29 @@ export default {
   },
   components: {
     articleList
+  },
+  methods: { },
+  mounted () {
+    console.log(this.msg)
+    this.markedMsg = marked(this.msg)
+    this.$refs.content.innerHTML = this.markedMsg
+    Prism.highlightAll()
   }
 }
 </script>
 
 <style scoped>
-.main {
+.related {
+  margin-top: 30px;
   background: #fff;
-  width: 940px;
-  margin-bottom: 30px;
-  position: relative;
+  border-radius: 2px;
+}
+.title {
+  padding: 10px 26px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  color: #a9a9a9;
 }
 </style>

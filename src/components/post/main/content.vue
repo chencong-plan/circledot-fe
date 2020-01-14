@@ -1,11 +1,13 @@
 <template>
   <div class="content" ref="content">
+    <Title></Title>
   </div>
 </template>
 
 <script>
 import marked from 'marked'
 import Prism from 'prismjs'
+import Title from './title'
 // import '@/assets/css/typo.css'
 marked.setOptions({
   renderer: new marked.Renderer(),
@@ -27,11 +29,14 @@ export default {
       markedMsg: ''
     }
   },
+  components: {
+    Title
+  },
   methods: { },
   mounted () {
     console.log(this.msg)
     this.markedMsg = marked(this.msg)
-    this.$refs.content.innerHTML = this.markedMsg
+    this.$refs.content.innerHTML += this.markedMsg
     Prism.highlightAll()
   }
 }
@@ -41,11 +46,9 @@ export default {
 .content {
   margin-top: 5px;
   text-align: left;
+  background: #fff;
+  padding: 26px;
 }
-.content span {
-  text-indent: 2em;
-}
-
 .content h4,.content h3,.content h2 {
   margin: 20px 0;
 }
