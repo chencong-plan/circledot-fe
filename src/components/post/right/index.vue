@@ -1,6 +1,6 @@
 <template>
   <div class="rightContent">
-    <div class="content" ref="content">
+    <div class="contentWrap" ref="content">
       <span>目录</span>
       <ul>
         <li v-for="(level1,index) in treeArr" :key=index>
@@ -104,11 +104,11 @@ export default {
   padding: 20px;
   text-align: left;
 }
-.rightContent .content {
+.rightContent .contentWrap {
   font-size: 17px;
   position: fixed;
 }
-.rightContent .content > ul {
+.rightContent .contentWrap > ul {
   margin-top: 10px;
 }
 .rightContent ul li {
@@ -118,7 +118,7 @@ export default {
   line-height: 1.6;
   font-size: 16px;
 }
-.rightContent .content > ul > li {
+.rightContent .contentWrap > ul > li {
   font-weight: bold;
 }
 a {

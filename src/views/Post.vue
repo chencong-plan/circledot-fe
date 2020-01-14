@@ -30,6 +30,8 @@ export default {
 
 ### 继承二级标题
 
+![image.png](http://www.baidu.com)
+
 >该原型对象也有一个自己的原型对象( __proto__ ) ，层层向上直到一个对象的原型对象为 null。根据定义，null 没有原型，并作为这个原型链中的最后一个环节。
 
 比如 
