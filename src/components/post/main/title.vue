@@ -3,23 +3,34 @@
     <div class="avatar">
       <img src="@/assets/avatar1.jpg" width=45 height=45 alt="">
       <div class="right">
-        <span class="authName">千与千寻</span>
+        <span class="authName">{{ titleData.author }}</span>
         <div class="info">
-          <span class="date">2019-12-18 10:32:10</span>
+          <span class="date">{{ titleData.date }}</span>
           <span>
             阅读量
-            <span>(234)</span>
+            <span>({{ titleData.read }})</span>
           </span>
         </div>
       </div>
       <div class='follow'>关注</div>
     </div>
-    <h1>如何通过K8S编排应用如何通过K8S编排应用如何通</h1>
+    <h1>{{ titleData.title }}</h1>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data () {
+    return {
+      titleData: {
+        author: '千与千寻',
+        date: '2019-12-18 10:32:10',
+        read: '234',
+        title: '如何通过K8S编排应用如何通过K8S编排应用如何通'
+      }
+    }
+  }
+}
 </script>
 
 <style scoped>
