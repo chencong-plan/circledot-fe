@@ -33,7 +33,7 @@ export default {
   background: #fff;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 2000;
 }
 .container {
   align-items: center;
