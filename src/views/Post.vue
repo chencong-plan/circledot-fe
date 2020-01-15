@@ -30,7 +30,7 @@ export default {
 
 ### 继承二级标题
 
-![image.png](http://www.baidu.com)
+![image.png](https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1059855869,2611240339&fm=26&gp=0.jpg)
 
 >该原型对象也有一个自己的原型对象( __proto__ ) ，层层向上直到一个对象的原型对象为 null。根据定义，null 没有原型，并作为这个原型链中的最后一个环节。
 
@@ -101,6 +101,10 @@ console.log(foo(5));
 * 密码与确认密码不同，或已经注册的用户，返回400
 
 ## 登录流程
+
+* 注册时传入用户名,密码,确认密码
+* 注册成功将用户名与密码存入数据库
+* 密码与确认密码不同，或已经注册的用户，返回400
     `
 
     }
