@@ -34,7 +34,6 @@ export default {
   },
   methods: { },
   mounted () {
-    console.log(this.msg)
     this.markedMsg = marked(this.msg)
     this.$refs.content.innerHTML += this.markedMsg
     Prism.highlightAll()
@@ -45,7 +44,6 @@ export default {
 <style>
 .content {
   margin-top: 5px;
-  text-align: left;
   background: #fff;
   padding: 26px;
 }
@@ -86,5 +84,8 @@ code {
    font-size: 16px;
    font-family: Menlo,Monaco,Consolas,Courier New,monospace;
 }
-
+::selection {
+  background: #007fff !important;
+  color: #fff;
+}
 </style>

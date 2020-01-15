@@ -13,6 +13,8 @@
     "babel-plugin-prismjs": "^1.1.1",
     "core-js": "^3.4.3",
     "element-ui": "^2.13.0",
+    "emoji-mart-vue": "^2.6.6",
+    "emoji-vue": "^0.2.4",
     "mavon-editor": "^2.7.7",
     "prismjs": "^1.17.1",
     "pygmentize-bundled": "^2.3.0",
