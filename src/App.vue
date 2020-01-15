@@ -39,9 +39,6 @@ body {
   display: flex;
   margin: 0 auto;
 }
-li {
-  list-style: none;
-}
 a {
   text-decoration: none;
   color: inherit;
@@ -54,5 +51,10 @@ a {
   top: 100%;
   margin-top: 8px;
   left: 60px;
+  z-index: 1600;
+}
+.v-note-wrapper {
+  border: none !important;
+  min-height: 50px !important;
 }
 </style>

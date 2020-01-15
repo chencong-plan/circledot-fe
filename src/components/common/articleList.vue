@@ -52,6 +52,9 @@ export default {
 ul {
   text-align: left;
 }
+ul li {
+  list-style: none;
+}
 .article {
   padding: 20px 26px;
   cursor: pointer;

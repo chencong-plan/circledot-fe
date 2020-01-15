@@ -44,6 +44,9 @@ ul li {
   margin-right: 30px;
   cursor: pointer;
 }
+ul li {
+  list-style: none;
+}
 ul li.active {
   color: #007fff;
 }
