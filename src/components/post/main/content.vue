@@ -1,5 +1,5 @@
 <template>
-  <div class="content" ref="content">
+  <div class="articleContent" ref="articleContent">
     <Title></Title>
   </div>
 </template>
@@ -35,27 +35,28 @@ export default {
   methods: { },
   mounted () {
     this.markedMsg = marked(this.msg)
-    this.$refs.content.innerHTML += this.markedMsg
+    this.$refs.articleContent.innerHTML += this.markedMsg
     Prism.highlightAll()
   }
 }
 </script>
 
 <style>
-.content {
+.articleContent {
   margin-top: 5px;
   background: #fff;
   padding: 26px;
 }
-.content h4,.content h3,.content h2 {
+.articleContent h4,.articleContent h3,.articleContent h2 {
   margin: 20px 0;
 }
 
 blockquote {
-  border-left: 4px solid #ddd;
+  border-left: 5px solid #ddd;
   color: #666;
   padding: 0 15px;
   font-size: 16px;
+  background: #f8f8f8;
 }
 blockquote p {
   padding: 5px 0;
@@ -66,11 +67,11 @@ pre {
   border: none !important;
   box-shadow: 0 0 0 0 !important;
 }
-.content ul li {
+.articleContent ul li {
   list-style-type: disc;
   margin-left: 18px;
 }
-.content div > p {
+.articleContent div > p {
   margin: 20px 0;
   font-size: 17px;
   color: #666;
