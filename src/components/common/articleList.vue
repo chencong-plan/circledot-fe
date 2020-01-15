@@ -35,8 +35,14 @@ export default {
   props: ['articleList'],
   methods: {
     jumpPost (article) {
-      console.log(article)
-      this.$router.push({ name: 'post', params: { id: article.id } })
+      // console.log(article)
+      // this.$router.push({ name: 'post', params: { id: article.id } })
+
+      let routeUrl = this.$router.resolve({
+        name: 'post',
+        params: { id: article.id }
+      })
+      window.open(routeUrl.href, '_blank')
     }
   }
 }

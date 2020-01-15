@@ -69,7 +69,6 @@ export default {
       this.allTitle.forEach(title => {
         title.top = document.getElementById(title.title).offsetTop
       })
-      console.log(this.allTitle)
     },
     getTree () {
       // 根据index将目录转换成树结构

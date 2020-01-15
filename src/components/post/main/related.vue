@@ -32,13 +32,7 @@ export default {
   components: {
     articleList
   },
-  methods: { },
-  mounted () {
-    console.log(this.msg)
-    this.markedMsg = marked(this.msg)
-    this.$refs.content.innerHTML = this.markedMsg
-    Prism.highlightAll()
-  }
+  methods: { }
 }
 </script>
 

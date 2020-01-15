@@ -21,7 +21,6 @@ export default class App extends Vue {}
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   background: #f4f5f5;
   height: 100vh;
@@ -46,5 +45,14 @@ li {
 a {
   text-decoration: none;
   color: inherit;
+}
+.emoji-mart .emoji-mart-emoji{
+  padding: 4px !important;
+}
+.emoji-mart {
+  position: absolute;
+  top: 100%;
+  margin-top: 8px;
+  left: 60px;
 }
 </style>
