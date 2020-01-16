@@ -77,7 +77,7 @@ export default {
       this.commentList[this.commentIndex].children.unshift({
         avatar: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1059855869,2611240339&fm=26&gp=0.jpg',
         fromUser: '千与千寻',
-        agree: 1,
+        agree: 0,
         agreeActive: false,
         targetUser: '聪聪不聪聪',
         content: value,

@@ -19,12 +19,12 @@ export default {
           username: '千与千寻',
           agree: 1,
           agreeActive: false,
-          content: `前言`,
+          content: `第一条评论`,
           children: [
             { avatar: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1059855869,2611240339&fm=26&gp=0.jpg',
               fromUser: '千与千寻',
-              agree: 1,
-              agreeActive: false,
+              agree: 12,
+              agreeActive: true,
               targetUser: '聪聪不聪聪',
               content: ` ### 比如 
 > 引用

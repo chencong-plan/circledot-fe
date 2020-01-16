@@ -32,7 +32,7 @@
               </div>
             </div>
           </div>
-          <comment-input v-show="commentIndex === index"></comment-input>
+          <comment-input v-show="commentIndex === index" background="#fff" @submit="submitComment"></comment-input>
         </div>
       </li>
     </ul>
@@ -54,6 +54,38 @@ export default {
   components: {
     avatar,
     commentInput
+  },
+  methods: {
+    agree (index) {
+      if (this.commentList[index].agreeActive && this.commentList[index].agree > 0) {
+        this.commentList[index].agree -= 1
+        this.commentList[index].agreeActive = false
+      } else {
+        this.commentList[index].agree += 1
+        this.commentList[index].agreeActive = true
+      }
+      // 发送到服务器
+    },
+    replay (index, e) {
+      // 添加commentInput组件
+      console.log(index)
+      this.commentIndex = index
+    },
+    submitComment (value) {
+      console.log(this.commentIndex, this.commentList)
+      this.commentList.push({
+        avatar: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1059855869,2611240339&fm=26&gp=0.jpg',
+        fromUser: '千与千寻',
+        agree: 0,
+        agreeActive: false,
+        targetUser: '聪聪不聪聪',
+        content: value,
+        time: '刚刚'
+      })
+      this.commentIndex = ''
+
+      // 发送到服务器
+    }
   }
 }
 </script>
@@ -82,7 +114,7 @@ ul li {
 }
 .content {
   margin-left: 52px;
-  border-bottom: 1px solid #f2ecec;
+  padding-bottom: 15px;
 }
 .operate {
   display: flex;

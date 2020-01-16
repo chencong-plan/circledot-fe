@@ -1,5 +1,5 @@
 <template>
-  <div class="commentInput" @click.stop=clickComentInput>
+  <div class="commentInput" @click.stop=clickComentInput :style="{background: background}">
     <img v-if="avatar" src="@/assets/avatar1.jpg" alt width="45px" height="45px" />
     <div class="input">
       <div class="top">
@@ -32,7 +32,7 @@
 <script>
 import { Picker } from 'emoji-mart-vue'
 export default {
-  props: ['avatar'],
+  props: ['avatar', 'background'],
   data () {
     return {
       pickerShow: false,
@@ -48,11 +48,9 @@ export default {
       this.pickerShow = !this.pickerShow
     },
     addEmoji (emoji, e) {
-      console.log(this.$refs.ta.innerText)
       this.$refs.ta.innerText += emoji.native
     },
     submitComment () {
-      console.log(this.$refs.ta.innerText)
       if (!this.$refs.ta.innerText.trim()) {
         this.$message({
           message: '评论内容不可为空哦~',
@@ -81,7 +79,6 @@ export default {
     let emojiMart = document.getElementsByClassName('emoji-mart')
     for (let emoji of emojiMart) {
       emoji.addEventListener('click', (e) => {
-        console.log('bbbbbbbbbbbb')
         e.stopPropagation()
       })
     }
