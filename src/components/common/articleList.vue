@@ -1,13 +1,13 @@
 <template>
   <div>
     <ul>
-      <li class="article" v-for="(article,index) in articleList" :key="index">
+      <li class="article" v-for="(article,index) in articleList" :key="index" @click="jumpPost(article)">
         <div class="describe">
           <a class="author text">{{ article.author }}</a>
           <span class="time text">{{ article.time }}</span>
           <a class="tag text">{{ article.tag }}</a>
         </div>
-        <a class="title" @click="jumpPost(article)">{{ article.title }}</a>
+        <a class="title">{{ article.title }}</a>
         <div class="support">
           <div class="agree">
             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 16 15">
