@@ -1,16 +1,19 @@
 <template>
-  <div class="commentList">
-    <ul>
+  <div class="childCommentList">
+   <ul>
       <li v-for="(comment,index) in commentList" :key=index>
         <div class="user">
           <avatar class="avatar" :src="comment.avatar"></avatar>
-          <span>{{ comment.username }}</span>
+          <div>
+            <span>{{ comment.fromUser }}</span><br>
+            <span>回复 &nbsp;<a>{{ comment.targetUser}}</a>:</span>
+          </div>
         </div>
         <div class="content">
            <mavon-editor ref="md" v-model="comment.content"
            :toolbarsFlag=falseFlag
            :subfield=falseFlag defaultOpen="preview"
-           previewBackground="#fff" :boxShadow=falseFlag
+           previewBackground="#f3f3f36e" :boxShadow=falseFlag
            :ishljs=trueFlag
            />
           <div class="operate">
@@ -29,9 +32,7 @@
               </div>
             </div>
           </div>
-          <comment-input v-show="commentIndex === index" @submit="submitComment"></comment-input>
-
-          <child-comment-list :commentList="comment.children"></child-comment-list>
+          <comment-input v-show="commentIndex === index"></comment-input>
         </div>
       </li>
     </ul>
@@ -41,9 +42,6 @@
 <script>
 import avatar from '@/components/common/avatar'
 import commentInput from './commentInput'
-import childCommentList from './childCommentList'
-
-import 'mavon-editor/dist/css/index.css'
 export default {
   props: ['commentList'],
   data () {
@@ -55,69 +53,35 @@ export default {
   },
   components: {
     avatar,
-    commentInput,
-    childCommentList
-  },
-  methods: {
-    agree (index) {
-      if (this.commentList[index].agreeActive && this.commentList[index].agree > 0) {
-        this.commentList[index].agree -= 1
-        this.commentList[index].agreeActive = false
-      } else {
-        this.commentList[index].agree += 1
-        this.commentList[index].agreeActive = true
-      }
-      // 发送到服务器
-    },
-    replay (index, e) {
-      // 添加commentInput组件
-      this.commentIndex = index
-    },
-    submitComment (value) {
-      this.commentList[this.commentIndex].children.unshift({
-        avatar: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1059855869,2611240339&fm=26&gp=0.jpg',
-        fromUser: '千与千寻',
-        agree: 1,
-        agreeActive: false,
-        targetUser: '聪聪不聪聪',
-        content: value,
-        time: '刚刚'
-      })
-      this.commentIndex = ''
-      // 发送到服务器
-    }
-  },
-  mounted () {
-    document.addEventListener('click', () => {
-      console.log('xxxxx')
-      this.commentIndex = ''
-    })
+    commentInput
   }
 }
 </script>
 
 <style scoped>
-.commentList {
-  margin-left: 80px;
+.childCommentList {
+  background: #fafbfc;
+  margin-top: 15px;
+  padding: 0px 20px;
+  border-top: 1px solid #Fff;
+  border-radius: 2px;
 }
 ul li {
   /* border: 1px solid red; */
-  margin: 20px 0 25px;
+  margin: 12px 0;
   list-style: none;
 }
 .user {
   display: flex;
   align-items: center;
   font-size: 14px;
-  line-height: 22px;
+  line-height: 25px;
 }
 .user .avatar {
   margin-right: 12px;
 }
 .content {
-  margin-left: 57px;
-  margin-right: 20px;
-  padding-bottom: 5px;
+  margin-left: 52px;
   border-bottom: 1px solid #f2ecec;
 }
 .operate {
@@ -144,5 +108,9 @@ ul li {
 .operate .agree, .operate .replay {
   display: flex;
   align-items: center;
+}
+a {
+  color: #6190e8;
+  cursor: pointer;
 }
 </style>
