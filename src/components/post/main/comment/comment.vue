@@ -1,5 +1,5 @@
 <template>
-  <div class="comment">
+  <div class="comment" id="comment">
     <div class="text">评论</div>
     <comment-input :avatar="avatarFlag" @submit="submitComment"></comment-input>
     <comment-list :commentList="commentList"></comment-list>
