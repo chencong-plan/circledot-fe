@@ -9,7 +9,7 @@
 
 <script>
 import Content from './content.vue'
-import Comment from './comment.vue'
+import Comment from './comment/comment.vue'
 import Related from './related.vue'
 import Support from './support.vue'
 export default {
