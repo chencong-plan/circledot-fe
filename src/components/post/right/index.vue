@@ -21,7 +21,6 @@ export default {
 .rightContent {
   margin-left: 26px;
   width: 280px;
-  padding: 0 20px;
   text-align: left;
 }
 </style>
