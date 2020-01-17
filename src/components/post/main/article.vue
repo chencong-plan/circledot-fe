@@ -43,7 +43,6 @@ export default {
 
 <style>
 .articleContent {
-  margin-top: 5px;
   background: #fff;
   padding: 26px;
 }
