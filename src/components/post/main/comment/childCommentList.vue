@@ -86,6 +86,11 @@ export default {
 
       // 发送到服务器
     }
+  },
+  mounted () {
+    document.addEventListener('click', () => {
+      this.commentIndex = ''
+    })
   }
 }
 </script>
@@ -102,6 +107,10 @@ ul li {
   /* border: 1px solid red; */
   margin: 12px 0;
   list-style: none;
+  border-bottom: 1px solid #f2ecec;
+}
+ul li:last-child {
+  border-bottom: none;
 }
 .user {
   display: flex;

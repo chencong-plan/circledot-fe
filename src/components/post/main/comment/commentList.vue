@@ -89,7 +89,6 @@ export default {
   },
   mounted () {
     document.addEventListener('click', () => {
-      console.log('xxxxx')
       this.commentIndex = ''
     })
   }

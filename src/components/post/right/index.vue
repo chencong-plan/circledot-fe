@@ -20,7 +20,7 @@ export default {
 <style scoped>
 .rightContent {
   margin-left: 26px;
-  width: 280px;
+  width: 260px;
   text-align: left;
 }
 </style>
