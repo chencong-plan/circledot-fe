@@ -3,7 +3,7 @@
     <ul>
       <li v-for="(comment,index) in commentList" :key=index>
         <div class="user">
-          <avatar class="avatar" :src="comment.avatar"></avatar>
+          <avatar class="avatar" :src="comment.avatar" size='45px'></avatar>
           <span>{{ comment.username }}</span>
         </div>
         <div class="content">
