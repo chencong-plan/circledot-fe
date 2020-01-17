@@ -36,12 +36,12 @@ export default {
   background: #fff;
 }
 .title {
-  padding: 10px 15px;
+  padding: 12px 20px;
   border-bottom: 1px solid #ddd;
   font-size: 16px;
 }
 .user {
-  padding: 15px 15px;
+  padding: 15px 20px;
   display: flex;
   align-items: center;
 }
