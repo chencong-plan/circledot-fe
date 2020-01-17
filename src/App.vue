@@ -50,11 +50,13 @@ a {
   position: absolute;
   top: 100%;
   margin-top: 8px;
-  left: 60px;
   z-index: 1600;
 }
 .v-note-wrapper {
   border: none !important;
   min-height: 50px !important;
+}
+.v-show-content.scroll-style.scroll-style-border-radius {
+  padding: 0 0 !important;
 }
 </style>

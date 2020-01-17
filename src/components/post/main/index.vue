@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <Content :msg="msg"></Content>
+    <Article :msg="msg"></Article>
     <Comment></Comment>
     <Related></Related>
     <support></support>
@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import Content from './content.vue'
-import Comment from './comment.vue'
+import Article from './article.vue'
+import Comment from './comment/comment.vue'
 import Related from './related.vue'
 import Support from './support.vue'
 export default {
@@ -18,7 +18,7 @@ export default {
     return {}
   },
   components: {
-    Content,
+    Article,
     Comment,
     Related,
     Support

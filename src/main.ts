@@ -7,7 +7,6 @@ import '@/assets/prism.css'
 import './plugins/element.js'
 import 'element-ui/lib/theme-chalk/index.css'
 import mavonEditor from 'mavon-editor'
-
 import '@/assets/css/github-markdown.min.css'
 
 Vue.config.productionTip = false

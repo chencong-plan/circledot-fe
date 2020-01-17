@@ -1,4 +1,3 @@
-/* eslint-disable vue/no-dupe-keys */
 <template>
   <div class="support">
     <span class="icon" :class="{ praise,count:pariseCount }" :badge="pariseCount" @click="pariseArtical()">
@@ -9,7 +8,7 @@
         />
       </svg>
     </span>
-    <span class="icon" :class="{ comment,count: commentCount }" :badge="commentCount" @click="comment = !comment">
+    <span class="icon" :class="{ comment,count: commentCount }" :badge="commentCount" @click="jumpToComment">
       <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13" viewBox="0 0 14 13">
         <path fill="#B2BAC2" fill-rule="evenodd" d="M14 0v9.23H8.815L3.37 13V9.23H0V0z" />
       </svg>
@@ -62,10 +61,10 @@ export default {
   data () {
     return {
       praise: true,
-      comment: false,
-      collection: true,
       pariseCount: 100,
-      commentCount: 10
+      comment: false,
+      commentCount: 10,
+      collection: true
     }
   },
   methods: {
@@ -73,6 +72,9 @@ export default {
       console.log(this.praise)
       this.praise = !this.praise
       this.praise ? this.pariseCount += 1 : this.pariseCount -= 1
+    },
+    jumpToComment () {
+      window.scrollTo(0, document.querySelector('#comment').offsetTop)
     }
   }
 }
