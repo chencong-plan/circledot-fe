@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <Header></Header>
-    <router-view></router-view>
+    <div class='routerWrap'>
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -33,6 +35,10 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+.routerWrap {
+  margin-top: 80px;
+  background: inherit;
 }
 .container {
   width: 1250px;

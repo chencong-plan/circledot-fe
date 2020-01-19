@@ -117,10 +117,6 @@ console.log(foo(5));
 </script>
 
 <style scoped>
-.home {
-  background: inherit;
-  margin-top: 80px;
-}
 .container {
   justify-content:center;
 }
