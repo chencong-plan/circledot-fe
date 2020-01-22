@@ -19,7 +19,4 @@ export default {
 .home {
   background: inherit;
 }
-.container {
-  justify-content:center;
-}
 </style>

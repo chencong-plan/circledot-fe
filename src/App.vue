@@ -26,6 +26,8 @@ export default class App extends Vue {}
   color: #2c3e50;
   background: #f4f5f5;
   height: 100vh;
+  /* margin 合并 */
+  border-top: 1px solid transparent
 }
 body {
   height: 100vh;
