@@ -1,6 +1,6 @@
 # circle-dot
 
-## Project setup
+##  Project setup
 ```
 npm install
 ```
