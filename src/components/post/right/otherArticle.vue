@@ -3,7 +3,7 @@
     <div class="title">作者其他文章</div>
     <div class="articleList">
       <ul>
-        <li v-for="(article,index) in articleList" :key=index>
+        <li v-for="(article,index) in articleList" :key=index @click="jumpPost(article)">
           <div>{{ article.title }}</div>
           <support :article=article></support>
         </li>
@@ -43,6 +43,18 @@ export default {
   },
   components: {
     support
+  },
+  methods: {
+    jumpPost (article) {
+      // console.log(article)
+      // this.$router.push({ name: 'post', params: { id: article.id } })
+
+      let routeUrl = this.$router.resolve({
+        name: 'post',
+        params: { id: article.id }
+      })
+      window.open(routeUrl.href, '_blank')
+    }
   }
 }
 </script>
@@ -61,5 +73,9 @@ export default {
 ul li {
   list-style: none;
   padding: 12px 20px 0;
+  cursor: pointer;
+}
+ul li:hover {
+  background-color: rgba(0,0,0,.01);
 }
 </style>

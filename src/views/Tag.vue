@@ -1,22 +1,16 @@
 <template>
   <div class="home">
-    This is Tag Component
-    <div class="container">
-      <!-- <Main></Main>
-      <Right></Right> -->
-    </div>
+    <Tag></Tag>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-// import Main from '@/components/main/index.vue'
-// import Right from '@/components/right/index.vue'
+import Tag from '@/components/tag/index.vue'
 
 export default {
   components: {
-    // Main,
-    // Right
+    Tag
   }
 }
 </script>
@@ -24,8 +18,5 @@ export default {
 <style scoped>
 .home {
   background: inherit;
-}
-.container {
-  justify-content:center;
 }
 </style>

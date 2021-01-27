@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <Header></Header>
-    <router-view></router-view>
+    <div class='routerWrap'>
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -24,6 +26,8 @@ export default class App extends Vue {}
   color: #2c3e50;
   background: #f4f5f5;
   height: 100vh;
+  /* margin 合并 */
+  border-top: 1px solid transparent
 }
 body {
   height: 100vh;
@@ -33,6 +37,10 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+.routerWrap {
+  margin-top: 80px;
+  background: inherit;
 }
 .container {
   width: 1250px;
